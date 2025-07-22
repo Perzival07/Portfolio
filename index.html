@@ -42,36 +42,70 @@
                 interaction is both enjoyable and efficient.</p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
 
-                <div class="tab-contents">
+                <div class="tab-contents active-tab" id="skills">
                     <ul>
                         <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                         <li><span>Web Development</span><br>Web App Development</li>
                         <li><span>App Development</span><br>Building Android/iOS apps</li>
                     </ul>
                 </div>
-                <div class="tab-contents">
+                <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                        <li><span>Web Development</span><br>Web App Development</li>
-                        <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        <li><span>UI/UX Design</span><br>Designed responsive web/app interfaces for data-driven dashboards using Figma</li>
+                        <li><span>Web Development</span><br>Developed web applications integrating ML models using Flask and React</li>
+                        <li><span>App Development</span><br>Built mobile apps with real-time ML inference using TensorFlow Lite</li>
+                        <li><span>Machine Learning Projects</span><br>Implemented ML models for image classification, fraud detection, and sentiment analysis using Scikit-learn and TensorFlow</li>
+                        <li><span>Deep Learning</span><br>Trained CNN models for handwritten digit recognition and face mask detection using Keras and OpenCV</li>
+                        <li><span>AI Internship</span><br>Worked as an AI Intern at DataMind Labs (May 2024 – Aug 2024); built a recommendation system for retail data using collaborative filtering</li>
+                        <li><span>NLP Projects</span><br>Built a chatbot using Python and Hugging Face Transformers; developed a news summarizer using BERT</li>
+                        <li><span>Research Project</span><br>Worked on a college research project: "AI-based Early Detection of Plant Diseases using CNNs" (Presented at TechFest 2024)</li>
+                        <li><span>Open Source</span><br>Contributed to ML-related repositories during Hacktoberfest and GSSoC 2024 — bug fixes and model optimization</li>
+                        <li><span>Kaggle</span><br>Participated in Kaggle competitions (Titanic, House Prices) — Top 20% in one competition</li>
                     </ul>
                 </div>
-                <div class="tab-contents">
+
+                <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                        <li><span>Web Development</span><br>Web App Development</li>
-                        <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        <li><span>2023-Present</span><br>BTech in Computer Science and Engineering from UEM Kolkata</li>
+                        <li><span>2022</span><br>High Secondary from Auxilium Convent School Barasat</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-------------services----------------->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+    </div>
+</div>
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
     
 </body>
 </html>
