@@ -352,6 +352,32 @@ nav .fa-solid{
     margin-top: -40px;
     display: block;
 }
+.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background-color: #ff004f;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 0 10px #ff004f;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+.back-to-top:hover {
+    background-color: #e60045;
+    transform: translateY(-5px);
+}
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 
 
 @media only screen and (max-width: 600px){
