@@ -384,8 +384,6 @@ nav .fa-solid{
     transform: translateY(0);
 }
 
-
-
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(images/phone-background.png); /* Replace with my image path */
